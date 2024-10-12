@@ -45,7 +45,7 @@ export default function Home() {
       <main className="flex min-h-dvh flex-col space-y-8 text-sm sm:text-base">
         <HeaderSection
           profile={mohit}
-          avatarUrl="https://avatars.githubusercontent.com/u/7965137?v=4"
+          avatarUrl="https://assets.aboutmohit.com/avatar-mohit.jpeg"
         />
         <AboutSection profile={mohit} />
         <SkillsSection skills={mohit.skills} />
