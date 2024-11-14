@@ -4,10 +4,11 @@ import {
     IconBrandGithub,
     IconBrandLinkedin,
     IconBrandX,
-    IconHome
+    IconHome,
+    IconBrandBluesky
 } from '@tabler/icons-react';
 
-export function getNavLinks(profileLinks: { twitter: string; github: string, linkedin: string }): NavLink[] {
+export function getNavLinks(profileLinks: { bluesky: string, twitter: string; github: string, linkedin: string }): NavLink[] {
     return [
         {
             title: "Home",
@@ -31,6 +32,14 @@ export function getNavLinks(profileLinks: { twitter: string; github: string, lin
                 <IconBrandLinkedin className="h-full w-full " />
             ),
             href: `https://linkedin.com/in/${profileLinks.linkedin}`,
+            openBlank: true
+        },
+        {
+            title: "Bluesky",
+            icon: (
+                <IconBrandBluesky className="h-full w-full " />
+            ),
+            href: `https://bsky.app/profile/${profileLinks.bluesky}`,
             openBlank: true
         },
         {

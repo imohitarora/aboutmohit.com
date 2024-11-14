@@ -6,7 +6,8 @@ export const mohit = {
         "github": "imohitarora",
         "resume": "https://aboutmohit.com",
         "twitter": "aboutmohit",
-        "linkedin": "mohitaroralive"
+        "linkedin": "mohitaroralive",
+        "bluesky": "aboutmohit.com"
     },
     "title": "CTO | Software & Cloud Architect | Full-Stack | DevOps Expert ",
     "skills": [

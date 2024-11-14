@@ -38,8 +38,6 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,9 +46,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={cn(
-          'min-h-screen font-sans antialiased bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] max-w-2xl mx-auto py-12 sm:py-24 px-6',
-          geistSans.variable, geistMono.variable
+          'min-h-screen font-sans antialiased',
+          'bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]',
+          'bg-[size:14px_24px]',
+          'max-w-2xl mx-auto py-12 sm:py-24 px-6',
+          geistSans.variable,
+          geistMono.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark">
