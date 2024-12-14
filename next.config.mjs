@@ -9,6 +9,14 @@ const nextConfig = {
         pathname: "/avatar-mohit.jpeg",
         search: "",
       },
+      // img.icons8.com
+      {
+        protocol: "https",
+        hostname: "img.icons8.com",
+        port: "",
+        pathname: "/**",
+        search: "",
+      },
     ],
   },
 };
