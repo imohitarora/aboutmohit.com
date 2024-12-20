@@ -9,7 +9,7 @@ export const mohit = {
         "linkedin": "mohitaroralive",
         "bluesky": "aboutmohit.com"
     },
-    "title": "CTO | Software & Cloud Architect | Full-Stack | DevOps Expert ",
+    "title": "Software & Cloud Architect | CTO | Full-Stack | DevOps Expert ",
     "skills": [
         "Node.js",
         "NestJS",
@@ -82,7 +82,7 @@ export const mohit = {
     ],
     "experience": [
         {
-            "title": "CTO | Software & Cloud Architect",
+            "title": "Software & Cloud Architect | CTO",
             "period": "Sept. 2022 - Current",
             "company": "Indie Tech AI (Startup)",
             "responsibilities": [
