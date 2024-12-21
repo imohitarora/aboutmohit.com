@@ -24,7 +24,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
             <motion.div className="space-y-2">
                 <motion.h4 className="font-semibold text-base">What I Do</motion.h4>
                 <motion.p className="text-sm text-muted-foreground">
-                    I&apos;m the CTO and Architect at <a href="https://indietech.ai" target='_blank' className="underline text-foreground">Indie Tech</a>, where I guide the technical vision and craft scalable cloud architectures on Azure and AWS.
+                    I&apos;m Software & Cloud Architect at <a href="https://indietech.ai" target='_blank' className="underline text-foreground">Indie Tech</a>, where I guide the technical vision and craft scalable cloud architectures on Azure and AWS.
                 </motion.p>
                 <motion.p className="text-sm text-muted-foreground">
                     On the side, I run <a href="https://gracensity.com" target='_blank' className="underline text-foreground">Gracensity</a> as a hobby and learning platform, where I build cutting-edge full-stack apps with modern tech stacks.
