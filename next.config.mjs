@@ -6,7 +6,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "assets.aboutmohit.com",
         port: "",
-        pathname: "/avatar-mohit.jpeg",
+        pathname: "/**",
         search: "",
       },
       // img.icons8.com
