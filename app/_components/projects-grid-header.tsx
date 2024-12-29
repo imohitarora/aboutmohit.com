@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ChevronLeft } from "lucide-react";
+import Link from "next/link";
 
 export function ProjectsHeader() {
   return (
@@ -23,6 +25,20 @@ export function ProjectsHeader() {
             A collection of projects I&apos;ve worked on, from web applications
             to open source contributions and experiments.
           </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex justify-center mt-8"
+          >
+            <Link
+              href="/"
+              className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+            >
+              <ChevronLeft className="h-4 w-4 mr-2" />
+              Home
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </motion.header>

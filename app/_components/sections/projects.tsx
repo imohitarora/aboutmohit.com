@@ -10,41 +10,48 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import { Project } from "@/types";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
 import { ExternalLink, Play } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import VideoModal from "../video-modal";
+import Link from "next/link";
 
 interface ProjectsSectionProps {
   projects: Project[];
-  direction?: "left" | "right";
 }
 
-export function ProjectsSection({
-  projects,
-  direction = "right",
-}: ProjectsSectionProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [start, setStart] = useState(false);
+const truncateDescription = (description: string, maxLength: number = 100) => {
+  if (description.length <= maxLength) return description;
+  return description.slice(0, maxLength) + "...";
+};
+
+export function ProjectsSection({ projects }: ProjectsSectionProps) {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const totalSteps = Math.ceil(projects.length / 2);
 
   useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.style.setProperty(
-        "--animation-direction",
-        direction === "left" ? "forwards" : "reverse"
-      );
-      setStart(true);
-    }
-  }, [direction]);
+    const interval = setInterval(() => {
+      setActiveIndex((current) => {
+        // Instead of resetting, keep incrementing
+        if (current >= totalSteps - 1) {
+          // When reaching end, reset transform immediately
+          setTimeout(() => setActiveIndex(0), 0);
+          return current;
+        }
+        return current + 1;
+      });
+    }, 5000);
 
-  const ProjectCard = ({ project }: { project: Project }) => (
-    <Card className="flex flex-col">
+    return () => clearInterval(interval);
+  }, [totalSteps]);
+
+  const renderProjectCard = (project: Project, index: number) => (
+    <Card key={index} className="h-full dark:bg-slate-900 w-full">
       <CardHeader className="p-2">
         <div
           className="relative group cursor-pointer overflow-hidden rounded-t-lg"
@@ -64,8 +71,8 @@ export function ProjectsSection({
       </CardHeader>
       <CardContent className="flex-grow">
         <CardTitle className="mt-2">{project.title}</CardTitle>
-        <CardDescription className="mt-2">
-          {project.description}
+        <CardDescription className="mt-2 text-slate-400 h-[4.5em] overflow-hidden">
+          {truncateDescription(project.description)}
         </CardDescription>
         <div className="flex flex-wrap gap-2 mt-4">
           {project.tech.map((tag, tagIndex) => (
@@ -111,36 +118,44 @@ export function ProjectsSection({
     >
       <motion.h3 className="text-3xl font-bold">Projects</motion.h3>
 
-      <div
-        ref={containerRef}
-        className={cn(
-          "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_2%,white_98%,transparent)]"
-        )}
-      >
-        <div
-          className={cn(
-            "flex min-w-full shrink-0 gap-6 py-4 w-max flex-nowrap",
-            start && "animate-scroll",
-            "hover:[animation-play-state:paused]"
-          )}
-        >
-          {/* Original projects */}
-          {projects.map((project) => (
-            <div
-              key={`original-${project.title}`}
-              className="w-[450px] flex-shrink-0"
-            >
-              <ProjectCard project={project} />
-            </div>
-          ))}
-          {/* Cloned projects for infinite scroll */}
-          {projects.map((project) => (
-            <div
-              key={`clone-${project.title}`}
-              className="w-[450px] flex-shrink-0"
-            >
-              <ProjectCard project={project} />
-            </div>
+      <div className="relative overflow-hidden">
+        <div className="transition-all duration-700 ease-in-out">
+          <div
+            className="flex"
+            style={{
+              transform: `translateX(-${activeIndex * 100}%)`,
+              transition:
+                activeIndex === 0 ? "none" : "transform 0.7s ease-in-out",
+            }}
+          >
+            {/* Duplicate projects array for seamless loop */}
+            {[...projects, ...projects].map((project, index) => (
+              <div
+                key={index}
+                className="w-full sm:w-1/2 flex-shrink-0 px-2"
+                style={{
+                  opacity: Math.floor(index / 2) === activeIndex ? 1 : 0,
+                  transition: "opacity 0.7s ease-in-out",
+                }}
+              >
+                {renderProjectCard(project, index)}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex justify-center mt-8 gap-2">
+          {Array.from({ length: totalSteps }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === activeIndex ? "bg-gray-400" : "bg-gray-400/20"
+              }`}
+              aria-label={`Go to projects ${index * 2 + 1} and ${
+                index * 2 + 2
+              }`}
+            />
           ))}
         </div>
       </div>
@@ -172,10 +187,12 @@ export function ProjectsSection({
         </Link>
       </motion.div>
 
-      <VideoModal
-        videoUrl={selectedVideo}
-        onClose={() => setSelectedVideo(null)}
-      />
+      {selectedVideo && (
+        <VideoModal
+          videoUrl={selectedVideo}
+          onClose={() => setSelectedVideo(null)}
+        />
+      )}
     </motion.section>
   );
 }

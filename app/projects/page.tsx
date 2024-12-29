@@ -2,6 +2,7 @@
 
 import { FloatingDock } from "@/app/_components/floating-dock";
 import { InteractiveCanvas } from "@/app/_components/interacting-canvas";
+import { BackToTop } from "@/components/back-to-top";
 import { mohit } from "@/lib/data";
 import { getNavLinks } from "@/lib/navigation";
 import { getCalApi } from "@calcom/embed-react";
@@ -10,7 +11,6 @@ import { useTheme } from "next-themes";
 import { useEffect, useRef } from "react";
 import ProjectGrid from "../_components/project-grid";
 import { ProjectsHeader } from "../_components/projects-grid-header";
-import { BackToTop } from "@/components/back-to-top";
 
 export default function ProjectsHome() {
   const ref = useRef(null);

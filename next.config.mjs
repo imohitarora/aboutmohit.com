@@ -10,6 +10,7 @@ const cspHeader = `
   base-uri 'self';
   form-action 'self';
   frame-ancestors 'none';
+  frame-src 'self' https://*.cal.com;
   upgrade-insecure-requests;
 `;
 
@@ -23,7 +24,6 @@ const nextConfig = {
         pathname: "/**",
         search: "",
       },
-      // img.icons8.com
       {
         protocol: "https",
         hostname: "img.icons8.com",

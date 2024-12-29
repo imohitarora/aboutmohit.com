@@ -8,6 +8,26 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
+const useScrollLock = (isLocked: boolean) => {
+  useEffect(() => {
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+
+    if (isLocked) {
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "relative";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    return () => {
+      document.body.style.overflow = originalStyle;
+      document.body.style.position = "";
+      document.body.style.paddingRight = "0px";
+    };
+  }, [isLocked]);
+};
+
 interface VideoModalProps {
   videoUrl: string | null;
   onClose: () => void;
@@ -16,6 +36,8 @@ interface VideoModalProps {
 export default function VideoModal({ videoUrl, onClose }: VideoModalProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isOpen, setIsOpen] = useState(false);
+
+  useScrollLock(isOpen);
 
   useEffect(() => {
     setIsOpen(!!videoUrl);
@@ -57,10 +79,8 @@ export default function VideoModal({ videoUrl, onClose }: VideoModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-[800px]">
-        <DialogTitle className="mb-2">Video</DialogTitle>
-        <DialogDescription className="mb-4">
-          Click on the video to play/pause
-        </DialogDescription>
+        <DialogTitle></DialogTitle>
+        <DialogDescription></DialogDescription>
         <video
           ref={videoRef}
           controls

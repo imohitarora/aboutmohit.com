@@ -79,7 +79,7 @@ export const mohit = {
         "An external portfolio with order management and personal cms to manage the business",
     },
     {
-      video: "https://assets.aboutmohit.com/nextjs-blog.mp4",
+      video: "https://assets.aboutmohit.com/thumbnail-generator.mp4",
       tech: [
         "next.js",
         "neondatabase",
