@@ -1,6 +1,6 @@
 "use client";
 
-import { ProjectsGrid } from "@/components/projects-grid";
+import { ProjectCarousel } from "@/components/project-carousel";
 import { Project } from "@/types";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -20,7 +20,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
       viewport={{ once: true }}
     >
       <motion.h3 className="text-3xl font-bold">Projects</motion.h3>
-      <ProjectsGrid projects={projects} />
+      <ProjectCarousel projects={projects} />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

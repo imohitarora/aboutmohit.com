@@ -31,9 +31,10 @@ export function VideoDialog({ src, thumbnail }: VideoDialogProps) {
             priority
           />
           <Button
+            name="Play"
             variant="secondary"
             size="icon"
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 hover:bg-white transition-colors"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 transition-colors"
           >
             <Play className="h-6 w-6" />
           </Button>

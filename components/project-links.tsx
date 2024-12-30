@@ -13,17 +13,17 @@ export function ProjectLinks({ liveUrl, githubUrl }: ProjectLinksProps) {
   if (!liveUrl && !githubUrl) return null;
 
   return (
-    <motion.div 
+    <motion.div
       className="flex gap-3 w-full"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.4 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
     >
       {liveUrl && (
         <Button asChild variant="default" className="flex-1" size="sm">
-          <a 
-            href={liveUrl} 
-            target="_blank" 
+          <a
+            href={liveUrl}
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center"
           >
@@ -34,9 +34,9 @@ export function ProjectLinks({ liveUrl, githubUrl }: ProjectLinksProps) {
       )}
       {githubUrl && (
         <Button asChild variant="outline" className="flex-1" size="sm">
-          <a 
-            href={githubUrl} 
-            target="_blank" 
+          <a
+            href={githubUrl}
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center"
           >
