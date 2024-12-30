@@ -3,7 +3,7 @@
 import { ProjectCard } from "@/components/project-card";
 import { Project } from "@/types";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface ProjectCarouselProps {
   projects: Project[];
@@ -12,13 +12,15 @@ interface ProjectCarouselProps {
 export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((current) => (current + 1) % projects.length);
-    }, 5000); // Change project every 5 seconds
+  const handlePrevious = () => {
+    setCurrentIndex((current) =>
+      current === 0 ? projects.length - 1 : current - 1
+    );
+  };
 
-    return () => clearInterval(timer);
-  }, []);
+  const handleNext = () => {
+    setCurrentIndex((current) => (current + 1) % projects.length);
+  };
 
   return (
     <div className="w-full max-w-2xl mx-auto">
@@ -33,6 +35,24 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
           <ProjectCard project={projects[currentIndex]} index={0} />
         </motion.div>
       </AnimatePresence>
+      <div className="flex justify-center gap-4 mt-4">
+        <button
+          onClick={handlePrevious}
+          className="bg-gray-800/60 hover:bg-gray-800/80 text-white p-2 rounded-full w-12 h-12"
+          aria-label="Previous project"
+        >
+          ←
+        </button>
+        <button
+          onClick={handleNext}
+          className="bg-gray-800/60 hover:bg-gray-800/80 text-white p-2 rounded-full w-12 h-12"
+          aria-label="Next project"
+        >
+          →
+        </button>
+      </div>
     </div>
+
+    // there is a height issue in this, what is it ?
   );
 }

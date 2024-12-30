@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { IconMail, IconExternalLink } from "@tabler/icons-react";
 import { Profile } from "@/types";
+import { IconExternalLink, IconMail } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 interface AboutSectionProps {
   profile: Pick<Profile, "summary" | "links">;
@@ -82,9 +82,9 @@ export function AboutSection({ profile }: AboutSectionProps) {
         <Button
           variant="outline"
           size="sm"
-          data-cal-namespace="15min"
-          data-cal-link="mohitarora/15min"
-          data-cal-config='{"layout":"month_view"}'
+          onClick={() =>
+            window.open("https://cal.com/mohitarora/15min", "_ blank")
+          }
         >
           <IconMail className="mr-2 h-4 w-4" />
           Get in Touch

@@ -45,9 +45,9 @@ export function ContactSection({
             <Button
               variant="outline"
               size="lg"
-              data-cal-namespace="15min"
-              data-cal-link={calendarLink}
-              data-cal-config='{"layout":"month_view"}'
+              onClick={() =>
+                window.open("https://cal.com/mohitarora/15min", "_ blank")
+              }
             >
               <IconCalendar className="mr-2 h-5 w-5" />
               Schedule a Call
@@ -57,9 +57,7 @@ export function ContactSection({
       </div>
 
       <div className="w-full text-center mt-4">
-        <p className="text-sm text-primary-foreground">
-          Response time: Usually within 12 hours
-        </p>
+        <p className="text-sm">Response time: Usually within 12 hours</p>
       </div>
     </motion.section>
   );

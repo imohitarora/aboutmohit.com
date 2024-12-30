@@ -2,21 +2,19 @@
 
 import { mohit } from "@/lib/data";
 import { getNavLinks } from "@/lib/navigation";
-import { getCalApi } from "@calcom/embed-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { FloatingDock } from "../components/floating-dock";
 import { AboutSection } from "../components/sections/about";
 import { ContactSection } from "../components/sections/contact";
 import { EducationSection } from "../components/sections/education";
 import { ExperienceSection } from "../components/sections/experience";
 import { HeaderSection } from "../components/sections/header";
-// import { ProjectsSection } from "./_components/sections/projects";
 import { BackToTop } from "@/components/back-to-top";
 import { useTheme } from "next-themes";
 import { InteractiveCanvas } from "../components/interacting-canvas";
-import { SkillsSection } from "../components/sections/skills";
 import { ProjectsSection } from "../components/sections/projects";
+import { SkillsSection } from "../components/sections/skills";
 
 export default function Home() {
   const ref = useRef(null);
@@ -27,17 +25,6 @@ export default function Home() {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({ namespace: "15min" });
-      cal("ui", {
-        styles: { branding: { brandColor: "#000000" } },
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
-    })();
-  }, []);
 
   const links = getNavLinks(mohit.links);
 

@@ -50,7 +50,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </motion.div>
 
           <motion.p
-            className="text-muted-foreground text-sm leading-relaxed"
+            className="text-muted-foreground text-sm leading-relaxed h-[80px] line-clamp-2 overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: baseDelay + 0.3 }}
