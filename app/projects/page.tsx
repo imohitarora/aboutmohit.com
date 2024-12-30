@@ -1,16 +1,16 @@
 "use client";
 
-import { FloatingDock } from "@/app/_components/floating-dock";
-import { InteractiveCanvas } from "@/app/_components/interacting-canvas";
+import { FloatingDock } from "@/components/floating-dock";
+import { InteractiveCanvas } from "@/components/interacting-canvas";
 import { BackToTop } from "@/components/back-to-top";
+import { ProjectsGrid } from "@/components/projects-grid";
 import { mohit } from "@/lib/data";
 import { getNavLinks } from "@/lib/navigation";
 import { getCalApi } from "@calcom/embed-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useEffect, useRef } from "react";
-import ProjectGrid from "../_components/project-grid";
-import { ProjectsHeader } from "../_components/projects-grid-header";
+import { ProjectsHeader } from "../../components/projects-grid-header";
 
 export default function ProjectsHome() {
   const ref = useRef(null);
@@ -49,7 +49,7 @@ export default function ProjectsHome() {
       <main className="flex min-h-dvh flex-col space-y-8 text-sm sm:text-base">
         <ProjectsHeader />
         <BackToTop />
-        <ProjectGrid projects={mohit.portfolio} />
+        <ProjectsGrid projects={mohit.portfolio} />
         <FloatingDock
           items={links}
           desktopClassName="fixed bottom-4 left-1/2 -translate-x-1/2"

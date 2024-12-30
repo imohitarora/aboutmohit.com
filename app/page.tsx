@@ -5,17 +5,18 @@ import { getNavLinks } from "@/lib/navigation";
 import { getCalApi } from "@calcom/embed-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { FloatingDock } from "./_components/floating-dock";
-import { AboutSection } from "./_components/sections/about";
-import { ContactSection } from "./_components/sections/contact";
-import { EducationSection } from "./_components/sections/education";
-import { ExperienceSection } from "./_components/sections/experience";
-import { HeaderSection } from "./_components/sections/header";
-import { ProjectsSection } from "./_components/sections/projects";
-import { SkillsSection } from "./_components/sections/skills";
-import { InteractiveCanvas } from "./_components/interacting-canvas";
-import { useTheme } from "next-themes";
+import { FloatingDock } from "../components/floating-dock";
+import { AboutSection } from "../components/sections/about";
+import { ContactSection } from "../components/sections/contact";
+import { EducationSection } from "../components/sections/education";
+import { ExperienceSection } from "../components/sections/experience";
+import { HeaderSection } from "../components/sections/header";
+// import { ProjectsSection } from "./_components/sections/projects";
 import { BackToTop } from "@/components/back-to-top";
+import { useTheme } from "next-themes";
+import { InteractiveCanvas } from "../components/interacting-canvas";
+import { SkillsSection } from "../components/sections/skills";
+import { ProjectsSection } from "../components/sections/projects";
 
 export default function Home() {
   const ref = useRef(null);
