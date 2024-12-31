@@ -90,7 +90,7 @@ export const mohit = {
       title: "Website Thumbnail Generator",
       liveUrl: "",
       imageUrl: "https://assets.aboutmohit.com/thumbnail-generator.png",
-      githubUrl: "https://github.com/imohitarora/aboutmohit.com",
+      githubUrl: "https://github.com/imohitarora/thumbnail-maker",
       description:
         "Generate beautiful thumbnails from any website URL. Perfect for previews, social media cards, and documentation.",
     },
