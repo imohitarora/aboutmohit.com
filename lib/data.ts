@@ -52,38 +52,25 @@ export const mohit = {
   ],
   portfolio: [
     {
-      video: "https://assets.aboutmohit.com/aboutmohit.mp4",
+      video: "https://assets.aboutmohit.com/ccompass.mp4",
       tech: [
         "next.js",
-        "shacn",
-        "neondatabase",
-        "next-auth",
+        "shadcn",                
         "tailwindcss",
-        "framer-motion",
+        "github-api",
+        "netlify"
       ],
-      title: "aboutmohit.com",
-      liveUrl: "https://aboutmohit.com",
-      githubUrl: "https://github.com/imohitarora/aboutmohit.com",
-      imageUrl: "https://assets.aboutmohit.com/aboutmohit-thumbnail.png",
-      description:
-        "Portfolio App created for personal uses with a small cms for dynamic update.",
-    },
-    {
-      video: "https://assets.aboutmohit.com/adorabelshop.mp4",
-      tech: ["next.js", "shadcn", "postgres", "neondatabase", "next-auth"],
-      title: "adorabelshop.com",
-      liveUrl: "https://adorabelshop.com",
-      imageUrl: "https://assets.aboutmohit.com/adorabelshop-thumbnail.png",
+      title: "Contributor Compass",
+      liveUrl: "https://contributorcompass.aboutmohit.com",
       githubUrl: "",
+      imageUrl: "https://assets.aboutmohit.com/ccompass.png",
       description:
-        "An external portfolio with order management and personal cms to manage the business",
+        "Find open source projects that match your skills and interests. Get personalized suggestions based on your GitHub profile.",
     },
     {
-      video: "https://assets.aboutmohit.com/thumbnail-generator.mp4",
+      video: "https://assets.aboutmohit.com/thumbnail.mp4",
       tech: [
-        "next.js",
-        "neondatabase",
-        "next-auth",
+        "next.js",                
         "tailwindcss",
         "puppeteer",
       ],
@@ -94,6 +81,31 @@ export const mohit = {
       description:
         "Generate beautiful thumbnails from any website URL. Perfect for previews, social media cards, and documentation.",
     },
+    {
+      video: "https://assets.aboutmohit.com/aboutmohit.mp4",
+      tech: [
+        "next.js",
+        "shadcn",                
+        "tailwindcss",
+        "motion",        
+      ],
+      title: "aboutmohit.com",
+      liveUrl: "https://aboutmohit.com",
+      githubUrl: "https://github.com/imohitarora/aboutmohit.com",
+      imageUrl: "https://assets.aboutmohit.com/aboutmohit-thumbnail.png",
+      description:
+        "Portfolio App created for personal use.",
+    },
+    {
+      video: "https://assets.aboutmohit.com/adorabelshop.mp4",
+      tech: ["next.js", "shadcn", "postgres", "neondatabase", "next-auth"],
+      title: "adorabelshop.com",
+      liveUrl: "https://adorabelshop.com",
+      imageUrl: "https://assets.aboutmohit.com/adorabelshop-thumbnail.png",
+      githubUrl: "",
+      description:
+        "An external portfolio with admin module and order management and personal cms to manage the business.",
+    },    
   ],
   experience: [
     {
