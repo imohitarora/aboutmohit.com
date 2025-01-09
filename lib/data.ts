@@ -52,14 +52,18 @@ export const mohit = {
   ],
   portfolio: [
     {
+      video: "https://assets.aboutmohit.com/koonj.mp4",
+      tech: ["next.js", "shadcn", "tailwindcss", "netlify"],
+      title: "Contributor Compass",
+      liveUrl: "https://koonjimmigration.ca",
+      githubUrl: "",
+      imageUrl: "https://assets.aboutmohit.com/koonj.png",
+      description:
+        "An immigration website for Canada for an authorized RCIC consultant, specialized in Express Entry, PNP, and Study Visa.",
+    },
+    {
       video: "https://assets.aboutmohit.com/ccompass.mp4",
-      tech: [
-        "next.js",
-        "shadcn",                
-        "tailwindcss",
-        "github-api",
-        "netlify"
-      ],
+      tech: ["next.js", "shadcn", "tailwindcss", "github-api", "netlify"],
       title: "Contributor Compass",
       liveUrl: "https://contributorcompass.aboutmohit.com",
       githubUrl: "",
@@ -69,11 +73,7 @@ export const mohit = {
     },
     {
       video: "https://assets.aboutmohit.com/thumbnail.mp4",
-      tech: [
-        "next.js",                
-        "tailwindcss",
-        "puppeteer",
-      ],
+      tech: ["next.js", "tailwindcss", "puppeteer"],
       title: "Website Thumbnail Generator",
       liveUrl: "",
       imageUrl: "https://assets.aboutmohit.com/thumbnail-generator.png",
@@ -83,18 +83,12 @@ export const mohit = {
     },
     {
       video: "https://assets.aboutmohit.com/aboutmohit.mp4",
-      tech: [
-        "next.js",
-        "shadcn",                
-        "tailwindcss",
-        "motion",        
-      ],
+      tech: ["next.js", "shadcn", "tailwindcss", "motion"],
       title: "aboutmohit.com",
       liveUrl: "https://aboutmohit.com",
       githubUrl: "https://github.com/imohitarora/aboutmohit.com",
       imageUrl: "https://assets.aboutmohit.com/aboutmohit-thumbnail.png",
-      description:
-        "Portfolio App created for personal use.",
+      description: "Portfolio App created for personal use.",
     },
     {
       video: "https://assets.aboutmohit.com/adorabelshop.mp4",
@@ -105,7 +99,7 @@ export const mohit = {
       githubUrl: "",
       description:
         "An external portfolio with admin module and order management and personal cms to manage the business.",
-    },    
+    },
   ],
   experience: [
     {
