@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 2px solid #64748b !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #64748b !important;
+  width: 30px !important;
+  border-radius: 6px !important;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

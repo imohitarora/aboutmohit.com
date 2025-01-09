@@ -54,7 +54,7 @@ export const mohit = {
     {
       video: "https://assets.aboutmohit.com/koonj.mp4",
       tech: ["next.js", "shadcn", "tailwindcss", "netlify"],
-      title: "Contributor Compass",
+      title: "Koonj Immigration Services Inc.",
       liveUrl: "https://koonjimmigration.ca",
       githubUrl: "",
       imageUrl: "https://assets.aboutmohit.com/koonj.png",
@@ -73,7 +73,7 @@ export const mohit = {
     },
     {
       video: "https://assets.aboutmohit.com/thumbnail.mp4",
-      tech: ["next.js", "tailwindcss", "puppeteer"],
+      tech: ["next.js", "tailwindcss", "puppeteer", "react"],
       title: "Website Thumbnail Generator",
       liveUrl: "",
       imageUrl: "https://assets.aboutmohit.com/thumbnail-generator.png",
