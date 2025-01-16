@@ -62,6 +62,24 @@ export const mohit = {
         "An immigration website for Canada for an authorized RCIC consultant, specialized in Express Entry, PNP, and Study Visa.",
     },
     {
+      video: "https://assets.aboutmohit.com/docqueue.mp4",
+      tech: [
+        "next.js-15",
+        "shadcn",
+        "tailwindcss",
+        "valkey(redis)",
+        "bullmq",
+        "postgres",
+        "node:events",
+      ],
+      title: "DocQueue",
+      liveUrl: "",
+      githubUrl: "https://github.com/imohitarora/docqueue",
+      imageUrl: "https://assets.aboutmohit.com/docqueue.jpg",
+      description:
+        "This project showcases how to build a scalable job queue system using Redis and Node.js. It uses BullMQ and Node.js Events to send live updates to the client.",
+    },
+    {
       video: "https://assets.aboutmohit.com/ccompass.mp4",
       tech: ["next.js", "shadcn", "tailwindcss", "github-api", "netlify"],
       title: "Contributor Compass",
