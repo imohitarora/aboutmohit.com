@@ -20,7 +20,7 @@ export const InteractiveCanvas = ({ mode }: InteractiveCanvasProps) => {
     y: 0,
   });
   const pointsRef = useRef<Point[]>([]);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number>(undefined);
   const lastFrameTime = useRef<number>(0);
   const FPS = 30; // Limit FPS
   const frameDelay = 1000 / FPS;

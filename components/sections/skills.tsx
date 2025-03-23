@@ -1,5 +1,4 @@
-"use client";
-
+"use client";;
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import {
@@ -28,6 +27,8 @@ import {
 import { VscAzure } from "react-icons/vsc";
 import { TbSql } from "react-icons/tb";
 import { RiMicrosoftLoopLine } from "react-icons/ri";
+
+import type { JSX } from "react";
 
 interface SkillsSectionProps {
   skills: string[];
