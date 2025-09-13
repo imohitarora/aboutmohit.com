@@ -2,14 +2,17 @@
 
 import { Button } from "@/components/ui/button";
 import { Profile } from "@/types";
-import { IconExternalLink, IconMail } from "@tabler/icons-react";
+import { IconChecklist, IconExternalLink, IconMail } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 interface AboutSectionProps {
   profile: Pick<Profile, "summary" | "links">;
 }
 
 export function AboutSection({ profile }: AboutSectionProps) {
+  const router = useRouter();
+
   return (
     <motion.section
       aria-label="about"
@@ -24,16 +27,10 @@ export function AboutSection({ profile }: AboutSectionProps) {
       <motion.div className="space-y-2">
         <motion.h4 className="font-semibold text-base">What I Do</motion.h4>
         <motion.p className="text-sm text-muted-foreground">
-          I&apos;m Software & Cloud Architect at{" "}
-          <a
-            href="https://indietech.ai"
-            target="_blank"
-            className="underline text-foreground"
-          >
-            Indie Tech
-          </a>
-          , where I guide the technical vision and craft scalable cloud
-          architectures on Azure and AWS.
+          I&apos;m Technical Architect, specializing in cloud solutions and
+          full-stack development. I love turning complex problems into simple,
+          beautiful, and intuitive designs. When I&apos;m not coding,
+          you&apos;ll find me exploring the latest tech trends.
         </motion.p>
         {/* <motion.p className="text-sm text-muted-foreground">
                     On the side, I run <a href="https://gracensity.com" target='_blank' className="underline text-foreground">Gracensity</a> as a hobby and learning platform, where I build cutting-edge full-stack apps with modern tech stacks.
@@ -88,6 +85,14 @@ export function AboutSection({ profile }: AboutSectionProps) {
         >
           <IconMail className="mr-2 h-4 w-4" />
           Get in Touch
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => router.push("/projects")}
+        >
+          <IconChecklist className="mr-2 h-4 w-4" />
+          Projects
         </Button>
       </motion.div>
     </motion.section>

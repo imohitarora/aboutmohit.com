@@ -52,16 +52,6 @@ export const mohit = {
   ],
   portfolio: [
     {
-      video: "https://assets.aboutmohit.com/koonj.mp4",
-      tech: ["next.js", "shadcn", "tailwindcss", "netlify"],
-      title: "Koonj Immigration Services Inc.",
-      liveUrl: "https://koonjimmigration.ca",
-      githubUrl: "",
-      imageUrl: "https://assets.aboutmohit.com/koonj.png",
-      description:
-        "An immigration website for Canada for an authorized RCIC consultant, specialized in Express Entry, PNP, and Study Visa.",
-    },
-    {
       video: "https://assets.aboutmohit.com/docqueue.mp4",
       tech: [
         "next.js-15",
@@ -88,6 +78,16 @@ export const mohit = {
       imageUrl: "https://assets.aboutmohit.com/ccompass.png",
       description:
         "Find open source projects that match your skills and interests. Get personalized suggestions based on your GitHub profile.",
+    },
+    {
+      video: "https://assets.aboutmohit.com/koonj.mp4",
+      tech: ["next.js", "shadcn", "tailwindcss", "netlify"],
+      title: "Koonj Immigration Services Inc.",
+      liveUrl: "https://koonjimmigration.ca",
+      githubUrl: "",
+      imageUrl: "https://assets.aboutmohit.com/koonj.png",
+      description:
+        "An immigration website for Canada for an authorized RCIC consultant, specialized in Express Entry, PNP, and Study Visa.",
     },
     {
       video: "https://assets.aboutmohit.com/thumbnail.mp4",
@@ -121,9 +121,20 @@ export const mohit = {
   ],
   experience: [
     {
+      title: "Solutions Architect",
+      period: "Feb. 2025 - Present",
+      company: "Serco",
+      responsibilities: [
+        "Architected and led development of a high-volume appointment scheduling system handling 2M+ bookings annually across 100+ locations",
+        "Implemented secure identity management and payment processing systems compliant with government regulations",
+        "Designed real-time integration with multiple legacy systems using event-driven architecture",
+        "Managed cross-functional teams to deliver critical digital transformation initiatives for licensing services",
+      ],
+    },
+    {
       title: "Software & Cloud Architect",
-      period: "Sept. 2022 - Current",
-      company: "Indie Tech AI (Startup)",
+      period: "Sept. 2022 - Feb. 2025",
+      company: "Indie Tech AI",
       responsibilities: [
         "Led development of scalable web app using NestJS and Next.js, achieving 100% uptime.",
         "Implemented custom AI model with Azure OpenAI, improving user engagement.",
@@ -143,7 +154,7 @@ export const mohit = {
     {
       title: "Lead Engineer",
       period: "Oct. 2019 - Dec. 2020",
-      company: "SelFin India Financial Services (Startup)",
+      company: "SelFin India",
       responsibilities: [
         "Built IT infrastructure and tech team from the ground up.",
         "Developed core systems using Azure cloud with CI/CD pipeline, achieving 100% uptime.",

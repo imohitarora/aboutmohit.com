@@ -57,7 +57,9 @@ export function ContactSection({
       </div>
 
       <div className="w-full text-center mt-4">
-        <p className="text-sm">Response time: Usually within 12 hours</p>
+        <p className="text-sm text-primary-300">
+          looking forward to connecting!
+        </p>
       </div>
     </motion.section>
   );

@@ -47,7 +47,7 @@ export default function Home() {
         />
         <AboutSection profile={mohit} />
         <SkillsSection skills={mohit.skills} />
-        <ProjectsSection projects={mohit.portfolio} />
+        {/* <ProjectsSection projects={mohit.portfolio} /> */}
         <ExperienceSection experience={mohit.experience} />
         <EducationSection education={mohit.education} />
         <ContactSection
