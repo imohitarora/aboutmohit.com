@@ -17,12 +17,56 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Mohit Arora | Software & Cloud Architect | Full-Stack Developer | DevOps Expert",
+  metadataBase: new URL("https://aboutmohit.com"),
+  title: {
+    default:
+      "Mohit Arora | Software & Cloud Architect | Full-Stack Developer | DevOps Expert",
+    template: "%s | Mohit Arora",
+  },
   description:
     "Experienced Software & Cloud Architect with 10+ years in building scalable, secure cloud solutions. Expert in leading teams and delivering innovative projects with significant business impact.",
+  keywords: [
+    "Mohit Arora",
+    "Software Architect",
+    "Cloud Architect",
+    "Full-Stack Developer",
+    "DevOps Expert",
+    "Node.js",
+    "Next.js",
+    "React",
+    "Azure",
+    "AWS",
+    "NestJS",
+    "Angular",
+    "Python",
+    "GraphQL",
+    "Docker",
+    "Kubernetes",
+    "Software Engineering",
+    "Cloud Solutions",
+    "Scalable Architecture",
+  ],
+  authors: [{ name: "Mohit Arora", url: "https://aboutmohit.com" }],
+  creator: "Mohit Arora",
+  publisher: "Mohit Arora",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://aboutmohit.com",
+  },
   openGraph: {
     url: "https://aboutmohit.com",
+    siteName: "Mohit Arora - Portfolio",
+    locale: "en_US",
     type: "website",
     title:
       "Mohit Arora | Software & Cloud Architect | Full-Stack Developer | DevOps Expert",
@@ -31,11 +75,16 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v4/aboutmohit.com/Mohit%20Arora%20%7C%20CTO%20%7C%20Software%20%26%20Cloud%20Architect%20%7C%20Full-Stack%20Developer%20%7C%20DevOps%20Expert/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2Ff6085bc0-be40-420b-af3e-8fa11854fe83.jpg%3Ftoken%3DWCMMQZfgTcCmR1qsTuqtgDAnR9A-KpGzVtcgKeKA76Y%26height%3D1800%26width%3D1200%26expires%3D33265223856/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Mohit Arora - Software & Cloud Architect",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@aboutmohit",
+    creator: "@aboutmohit",
     title:
       "Mohit Arora | Software & Cloud Architect | Full-Stack Developer | DevOps Expert",
     description:
@@ -43,6 +92,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v4/aboutmohit.com/Mohit%20Arora%20%7C%20CTO%20%7C%20Software%20%26%20Cloud%20Architect%20%7C%20Full-Stack%20Developer%20%7C%20DevOps%20Expert/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2Ff6085bc0-be40-420b-af3e-8fa11854fe83.jpg%3Ftoken%3DWCMMQZfgTcCmR1qsTuqtgDAnR9A-KpGzVtcgKeKA76Y%26height%3D1800%26width%3D1200%26expires%3D33265223856/og.png",
+        alt: "Mohit Arora - Software & Cloud Architect",
       },
     ],
   },
