@@ -74,12 +74,13 @@ export const metadata: Metadata = {
       "Experienced Software & Cloud Architect with 10+ years in building scalable, secure cloud solutions. Expert in leading teams and delivering innovative projects with significant business impact.",
     images: [
       {
-        url: "https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v4/aboutmohit.com/Mohit%20Arora%20%7C%20CTO%20%7C%20Software%20%26%20Cloud%20Architect%20%7C%20Full-Stack%20Developer%20%7C%20DevOps%20Expert/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2Ff6085bc0-be40-420b-af3e-8fa11854fe83.jpg%3Ftoken%3DWCMMQZfgTcCmR1qsTuqtgDAnR9A-KpGzVtcgKeKA76Y%26height%3D1800%26width%3D1200%26expires%3D33265223856/og.png",
+        url: "/og.png",  // Much shorter!
         width: 1200,
         height: 630,
         alt: "Mohit Arora - Software & Cloud Architect",
+        type: "image/png",
       },
-    ],
+    ]
   },
   twitter: {
     card: "summary_large_image",
@@ -91,8 +92,11 @@ export const metadata: Metadata = {
       "Experienced Software & Cloud Architect with 10+ years in building scalable, secure cloud solutions. Expert in leading teams and delivering innovative projects with significant business impact.",
     images: [
       {
-        url: "https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v4/aboutmohit.com/Mohit%20Arora%20%7C%20CTO%20%7C%20Software%20%26%20Cloud%20Architect%20%7C%20Full-Stack%20Developer%20%7C%20DevOps%20Expert/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2Ff6085bc0-be40-420b-af3e-8fa11854fe83.jpg%3Ftoken%3DWCMMQZfgTcCmR1qsTuqtgDAnR9A-KpGzVtcgKeKA76Y%26height%3D1800%26width%3D1200%26expires%3D33265223856/og.png",
+        url: "/og.png",  // Much shorter!
+        width: 1200,
+        height: 630,
         alt: "Mohit Arora - Software & Cloud Architect",
+        type: "image/png",
       },
     ],
   },
